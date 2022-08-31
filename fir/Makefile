@@ -1,15 +1,16 @@
 CXX = g++
 CFLAG = -O3
-CFLAG += -I/home/1159021/repos/fun_proj/ac_include
+CFLAG += -I../ac_include
 CFILES = fir.cpp \
 	 main.cpp
 COUT = fir.x
+DOUT = output.dat
 
-compile:
+$(COUT): $(CFILES)
 	$(CXX) $(CFLAG) $(CFILES) -o $(COUT)
 
-run: compile
+$(DOUT): $(COUT)
 	./$(COUT)
 
 clean:
-	rm $(COUT)
+	rm $(COUT) $(DOUT)
