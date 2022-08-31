@@ -1,6 +1,6 @@
 CXX = g++
 CFLAG = -O3
-CFLAG += -I$(AC_INC)
+CFLAG += -I/home/1159021/repos/fun_proj/ac_include
 CFILES = fir.cpp \
 	 main.cpp
 COUT = fir.x
